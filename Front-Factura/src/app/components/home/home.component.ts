@@ -99,6 +99,7 @@ export class HomeComponent implements OnInit {
     const factura: Factura = {
       _id: '',
       facturasId: this.formAddFactura.value.factura,
+      numPedido: this.formAddFactura.value.numPedido,
       client: this.formAddFactura.value.cliente,
       fechaReg: this.formAddFactura.value.fechaReg.toISOString().slice(0,10),
       pushMoney: this.formAddFactura.value.pushM,

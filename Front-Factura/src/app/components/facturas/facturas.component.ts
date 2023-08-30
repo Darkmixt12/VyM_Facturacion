@@ -21,7 +21,7 @@ import { BorrarFacturaComponent } from '../borrar-factura/borrar-factura.compone
 export class FacturasComponent implements OnInit, AfterViewInit  {
 
   filterPost = ''
-  displayedColumns: string[] = ['facturasId','cliente','pushM', 'fechaReg', 'fechaRegDia_db', 'acciones' ];
+  displayedColumns: string[] = ['facturasId','numPedido','cliente','pushM', 'fechaReg', 'fechaRegDia_db', 'acciones' ];
   dataSource = new MatTableDataSource<Factura> /* se necesita para hacer la tabla */
   loading: boolean = false /* loading bar */
   verticalPosition: MatSnackBarVerticalPosition = 'top';

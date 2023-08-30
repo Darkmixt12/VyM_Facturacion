@@ -44,9 +44,6 @@ import { FacturasDespachoComponent } from './components/facturas-despacho/factur
 import { NotasCreditoComponent } from './components/notas-credito/notas-credito.component';
 import { EditCreditoComponent } from './components/edit-credito/edit-credito.component';
 import { BorrarCreditoComponent } from './components/borrar-credito/borrar-credito.component';
-import { PostComponent } from './components/post/post.component';
-import { FilterPipe } from './pipes/filter.pipe';
-
 
 
 
@@ -63,8 +60,7 @@ import { FilterPipe } from './pipes/filter.pipe';
     NotasCreditoComponent,
     EditCreditoComponent,
     BorrarCreditoComponent,
-    PostComponent,
-    FilterPipe
+
 
   ],
   imports: [

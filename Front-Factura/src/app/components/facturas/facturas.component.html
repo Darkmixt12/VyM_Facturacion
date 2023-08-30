@@ -19,6 +19,11 @@
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>No Factura.</th>
                 <td mat-cell *matCellDef="let element">{{ element.facturasId }}</td>
               </ng-container>
+
+              <ng-container matColumnDef="numPedido">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>No Pedido.</th>
+                <td mat-cell *matCellDef="let element">{{ element.numPedido }}</td>
+              </ng-container>
               
         <!-- Position Column -->
         <ng-container matColumnDef="cliente">

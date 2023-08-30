@@ -28,6 +28,7 @@ constructor(
 ){
   this.formAddFactura = this.fb.group({
     factura: [null, [Validators.required, Validators.minLength(6), Validators.maxLength(6), Validators.pattern("^[0-9]*$")] ], // cuando hay mas de una validacion color [ ] convirtiendo las validaciones en un Array
+    pedido: [null, [Validators.required, Validators.minLength(5), Validators.maxLength(5), Validators.pattern("^[0-9]*$")]],
     nameAlistador: [''],
   })
 
@@ -55,6 +56,7 @@ agregarFactura2(form: any){
   const factura: Factura = {
     _id: '',
     facturasId: this.formAddFactura.value.factura,
+    numPedido: this.formAddFactura.value.pedido,
     client: this.formAddFactura.value.cliente,
     fechaReg: this.formAddFactura.value.fechaReg,
     pushMoney: this.formAddFactura.value.pushM,

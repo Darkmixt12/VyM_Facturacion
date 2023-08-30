@@ -6,6 +6,7 @@ var Schema = mongoose.Schema;
 
 var FacturasSchema = Schema({
         facturasId: Number,
+        numPedido: Number,
         client: String,
         fechaReg: String,
         fechaRegHora_db: String,
@@ -17,6 +18,7 @@ var FacturasSchema = Schema({
         fechaChequeo: String,
         numMesa: String,
         horaChequeo: String,
+
         
 });
 

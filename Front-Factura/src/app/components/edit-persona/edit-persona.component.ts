@@ -141,6 +141,7 @@ export class EditPersonaComponent  {
     const factura: Factura ={
       _id: this.form.value._id,
       facturasId: this.form.value.facturasId,
+      numPedido: this.form.value.numPedido,
       client: this.form.value.cliente,
       fechaReg: this.form.value.fechaReg,
       pushMoney: this.form.value.pushMoney,

@@ -1,6 +1,7 @@
 export class Factura {
     constructor(
         public _id: String,
+        public numPedido: number,
         public facturasId: number,
         public client: String,
         public fechaReg: String,

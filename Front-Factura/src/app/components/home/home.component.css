@@ -23,8 +23,6 @@
     font-size: 80px;
     display: block;
     text-align:center;
-    margin-top: 2px;
-    margin-bottom: 20px; /* recien agregado */
 }
 
 #form span{
@@ -41,18 +39,17 @@
 
 .row{
     display: flex;
+    --bs-gutter-x: 0.8rem
 }
 .column{
     flex: 50%;
-    margin-right: 5px;
-    margin-left: 5px;
+
 }
 
 .column1{
     flex: 50%;
-    margin-right: 5px;
-    margin-left: 5px;
-    width: 30%;
+    margin: 0 auto;
+    width: 50%;
 }
 h2{   
 

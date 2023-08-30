@@ -15,6 +15,7 @@ var controller = {
         let dia = moment().format('L');
 
         factura.facturasId = params.facturasId;
+        factura.numPedido = params.numPedido;
         factura.client = params.client;
         factura.fechaReg = params.fechaReg;
         factura.fechaRegHora_db = hora;
@@ -27,8 +28,9 @@ var controller = {
         factura.numMesa = params.numMesa;
         factura.horaChequeo = params.horaChequeo
 
+        let resultNumPedido = await Facturas.find({numPedido: params.numPedido})
         let resultFacturas = await Facturas.find({facturasId: params.facturasId});
-        if(resultFacturas.length > 0) {
+        if(resultFacturas.length > 0 || resultNumPedido.length >0) {
             return res.status(500).send({message: 'Numero de factura ya utilizado'})
         }
         

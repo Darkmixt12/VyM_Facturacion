@@ -4,11 +4,10 @@ import { Routes, RouterModule } from "@angular/router";
 /*componentes  */
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { FacturasComponent } from './components/facturas/facturas.component';
-import { BorrarFacturaComponent } from './components/borrar-factura/borrar-factura.component';
-import { DespachoFacturaComponent } from './components/despacho-factura/despacho-factura.component';
-import { FacturasDespachoComponent } from './components/facturas-despacho/facturas-despacho.component';
-import { NotasCreditoComponent } from "./components/notas-credito/notas-credito.component";
+import { FacturasComponent } from './components/factura/facturas/facturas.component';
+import { DespachoFacturaComponent } from './components/factura/despacho-factura/despacho-factura.component';
+import { FacturasDespachoComponent } from './components/factura/facturas-despacho/facturas-despacho.component';
+import { NotasCreditoComponent } from "./components/credito/notas-credito/notas-credito.component";
 
 /* definir rutas */
 

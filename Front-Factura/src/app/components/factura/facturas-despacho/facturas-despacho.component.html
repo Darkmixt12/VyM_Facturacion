@@ -22,7 +22,7 @@
           <!-- Position Column -->
           <ng-container matColumnDef="nomChequeador">
             <th mat-header-cell *matHeaderCellDef mat-sort-header>Chequeador.</th>
-            <td mat-cell *matCellDef="let element">{{ element.nomChequeador }}</td>
+            <td mat-cell *matCellDef="let element">{{ element.nomChequeador  | titlecase}}</td>
           </ng-container>
           <ng-container matColumnDef="fechaChequeo">
             <th mat-header-cell *matHeaderCellDef mat-sort-header>Fecha que fue Chequeado.</th>
@@ -35,7 +35,7 @@
           <!-- Position Column -->
           <ng-container matColumnDef="nomAlistador">
             <th mat-header-cell *matHeaderCellDef mat-sort-header>Alistador.</th>
-            <td mat-cell *matCellDef="let element">{{ element.nomAlistador }}</td>
+            <td mat-cell *matCellDef="let element">{{ element.nomAlistador | titlecase }}</td>
           </ng-container>
           <!-- Numero de factura -->
           <ng-container matColumnDef="numMesa">
@@ -46,7 +46,7 @@
           </ng-container>
           <ng-container matColumnDef="horaChequeo">
             <th mat-header-cell *matHeaderCellDef mat-sort-header>Hora Chequeo</th>
-            <td mat-cell *matCellDef="let element">{{ element.horaChequeo }}</td>
+            <td mat-cell *matCellDef="let element">{{ element.horaChequeo  | uppercase }}</td>
           </ng-container>
 
           <ng-container matColumnDef="fechaRegDia_db">

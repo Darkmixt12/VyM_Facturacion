@@ -33,11 +33,11 @@ export class HomeComponent implements OnInit {
   maxDate: Date;
   // AUTO SELECT INTELIGENTE DEL FORM ALISTADOR
   nameAlistadorFilter = new FormControl('');
-  optionsAlistador: string[] = ['Alonso', 'Brandon','Cesar','Deivis', 'Fernando','Guillermo','Jimmy', 'Jaime','James', 'Kenneth Quiroz', 'Kenneth Azofeifa','Luis', 'Maicol','Jordan','Luis Murcia','Luis Pastel','Richard'];
+  optionsAlistador: string[] = ['Daniel', 'Brandon','Cesar', 'Fernando','Guillermo','Jimmy', 'Jaime','James', 'Kenneth Quiroz', 'Kenneth Azofeifa','Luis','Jair', 'Maicol','Jordan','Luis Murcia','Luis Pastel','Richard'];
   filteredOptionsAlistador!: Observable<string[]>;
   // AUTO FILTRADO DEL FORM CHEQUEADOR 
   nameChequeadorFilter = new FormControl('');
-  optionsChequeador: string[] = ['Alonso', 'Brandon','Cesar','Deivis','Fernando','Guillermo','Jimmy', 'Jaime','James', 'Kenneth Quiroz', 'Kenneth Azofeifa','Luis', 'Maicol','Jordan','Luis Murcia','Luis Pastel','Richard'];
+  optionsChequeador: string[] = ['Daniel', 'Brandon','Cesar','Fernando','Guillermo','Jimmy', 'Jaime','James', 'Kenneth Quiroz', 'Kenneth Azofeifa','Luis', 'Maicol','Jair','Jordan','Luis Murcia','Luis Pastel','Richard'];
   filteredOptionsChequeador!: Observable<string[]>;
 
     formAddFactura: FormGroup; /* nombre del formulario en el HTML */
@@ -55,7 +55,7 @@ export class HomeComponent implements OnInit {
       factura: [null, [Validators.required, Validators.minLength(6), Validators.maxLength(6), Validators.pattern("^[0-9]*$")] ], // cuando hay mas de una validacion color [ ] convirtiendo las validaciones en un Array
       cliente: ['',Validators.required],
       fechaReg: ['',[Validators.required,Validators.minLength(8),Validators.maxLength(8)]],
-      pushM: ['', Validators.pattern("^[0-9/-]*$")],
+      numPedido: ['',[Validators.required,Validators.minLength(5),Validators.maxLength(5), Validators.pattern("^[0-9]*$")]],
       nameChequeador: [''],
       nameAlistador: [''],
       fechaAlistado: [null,Validators.required],

@@ -4,7 +4,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Ncredito } from 'src/models/notaCredito';
 import { FacturaService } from 'src/services/factura.service';
 import { EditCreditoComponent } from '../edit-credito/edit-credito.component';
-import { BorrarFacturaComponent } from '../borrar-factura/borrar-factura.component';
+import { BorrarFacturaComponent } from '../../factura/borrar-factura/borrar-factura.component';
 import { MatPaginator } from '@angular/material/paginator';
 import {BorrarCreditoComponent } from '../borrar-credito/borrar-credito.component';
 

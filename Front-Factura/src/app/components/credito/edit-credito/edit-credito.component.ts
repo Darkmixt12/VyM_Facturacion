@@ -4,7 +4,8 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { MatSnackBar, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
 import { Ncredito } from 'src/models/notaCredito';
 import { FacturaService } from 'src/services/factura.service';
-import { estado, ampo } from './../../../services/selection';
+import { ampo, estado } from 'src/services/selection';
+
 
 @Component({
   selector: 'app-edit-credito',

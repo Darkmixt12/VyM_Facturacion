@@ -16,11 +16,10 @@
       (ngSubmit)="agregarFactura2(formAddFactura)"
       [formGroup]="formAddFactura"
     >
-
       <!-- EL FORM GROUP ES LO QUE ENLAZA el html al TS -->
       <div class="title">
         <fa-icon class="special" [icon]="faFileInvoiceDollar"></fa-icon>
-        <h2>TEST SERVER</h2>
+        <h2>FACTURAS VYM</h2>
       </div>
       <!-- CAMPO DE NOMBRE DE FACTURA -->
       <h3>FACTURA</h3>
@@ -64,14 +63,19 @@
               La factura debe tener como maximo
               <strong>6 caracteres</strong></span
             >
-            <span *ngIf="formAddFactura.get('factura')?.hasError('pattern') && formAddFactura.get('factura')?.touched">
+            <span
+              *ngIf="
+                formAddFactura.get('factura')?.hasError('pattern') &&
+                formAddFactura.get('factura')?.touched
+              "
+            >
               El Numero de factura solo puede contener
               <strong>NUMEROS</strong></span
             >
           </div>
         </div>
 
-        <!-- CAMPO DE NOMBRE DE CLIENTE -->
+        <!--! CAMPO DE NOMBRE DE CLIENTE -->
         <div class="column">
           <mat-form-field appearance="fill">
             <mat-label>NOMBRE DEL CLIENTE</mat-label>
@@ -97,7 +101,7 @@
       </div>
       <!-- para que se pongan uno debajo del otro y no en linea-->
 
-      <!-- CAMPO PUSH MONEY -->
+      <!--! FECHA REGISTRO -->
       <div class="row">
         <div class="column1">
           <mat-form-field>
@@ -135,25 +139,56 @@
           </div>
         </div>
 
-        <!-- CAMPO DE FECHA DE REGISTRO -->
+        <!--! CAMPO DE NUM PEDIDO -->
         <div class="column">
           <mat-form-field appearance="fill">
-            <mat-label>NUMERO PUSH MONEY</mat-label>
+            <mat-label>NUMERO DE PEDIDO</mat-label>
             <input
               matInput
-              formControlName="pushM"
+              formControlName="numPedido"
               autocomplete="off"
-              placeholder="Ingresar Num PushMoney"
+              placeholder="Ingresar Num Pedido"
             />
             <!-- Con el formControlName vinculamos el HTML con el Ts para los input-->
           </mat-form-field>
           <div class="error">
-            <span *ngIf="formAddFactura.get('pushM')?.hasError('pattern')">
-              Solo utilice: <strong>Numeros / o - </strong></span
+            <span
+              *ngIf="
+                formAddFactura.get('numPedido')?.hasError('required') &&
+                formAddFactura.get('numPedido')?.touched
+              "
+              >El numero de pedido es Obligatorio <br></span
             >
+            <span
+              *ngIf="
+                formAddFactura.get('numPedido')?.touched &&
+                formAddFactura.get('numPedido')?.hasError('pattern')
+              "
+            >
+              El numero de pedido solo puede tener numeros <br></span
+            >
+            <span
+              *ngIf="
+                formAddFactura.get('numPedido')?.hasError('minlength') &&
+                formAddFactura.get('numPedido')?.touched
+              ">
+              El minimo de caracteres es 5
+            </span>
+            <span
+            *ngIf="
+              formAddFactura.get('numPedido')?.hasError('maxlength') &&
+              formAddFactura.get('numPedido')?.touched
+            ">
+            El limite de caracteres es 5
+          </span>
+            
+          
           </div>
           <!-- mensaje de error para el form -->
         </div>
+
+
+      <!--! CAMPO ALISTADOR-->
       </div>
       <div>
         <h3 class="titlealistador">ALISTADOR</h3>
@@ -192,7 +227,6 @@
               </mat-select>
             </mat-form-field>
           </div>
-          
         </div>
         <!-- FECHA DE CHECKEO DEL ALISTADOR -->
         <div class="column">

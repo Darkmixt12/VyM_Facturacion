@@ -35,15 +35,14 @@ import {MatSelectModule} from '@angular/material/select';
 /* Componentes */
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { FacturasComponent } from './components/facturas/facturas.component';
-import { BorrarFacturaComponent } from './components/borrar-factura/borrar-factura.component';
-import { LoginComponent } from './components/login/login.component';
-import { EditPersonaComponent } from './components/edit-persona/edit-persona.component';
-import { DespachoFacturaComponent } from './components/despacho-factura/despacho-factura.component';
-import { FacturasDespachoComponent } from './components/facturas-despacho/facturas-despacho.component';
-import { NotasCreditoComponent } from './components/notas-credito/notas-credito.component';
-import { EditCreditoComponent } from './components/edit-credito/edit-credito.component';
-import { BorrarCreditoComponent } from './components/borrar-credito/borrar-credito.component';
+import { FacturasComponent } from './components/factura/facturas/facturas.component';
+import { BorrarFacturaComponent } from './components/factura/borrar-factura/borrar-factura.component';
+import { EditPersonaComponent } from './components/factura/edit-persona/edit-persona.component';
+import { DespachoFacturaComponent } from './components/factura/despacho-factura/despacho-factura.component';
+import { FacturasDespachoComponent } from './components/factura/facturas-despacho/facturas-despacho.component';
+import { NotasCreditoComponent } from './components/credito/notas-credito/notas-credito.component';
+import { EditCreditoComponent } from './components/credito/edit-credito/edit-credito.component';
+import { BorrarCreditoComponent } from './components/credito/borrar-credito/borrar-credito.component';
 
 
 
@@ -53,7 +52,6 @@ import { BorrarCreditoComponent } from './components/borrar-credito/borrar-credi
     HomeComponent,
     FacturasComponent,
     BorrarFacturaComponent,
-    LoginComponent,
     EditPersonaComponent,
     DespachoFacturaComponent,
     FacturasDespachoComponent,

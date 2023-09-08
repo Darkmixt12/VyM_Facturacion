@@ -23,6 +23,11 @@
         <td mat-cell *matCellDef="let element">{{ element.client }}</td>
     </ng-container>
 
+    <ng-container matColumnDef="agente">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>No Agente</th>
+        <td mat-cell *matCellDef="let element">{{ element.agente }}</td>
+    </ng-container>
+
     <ng-container matColumnDef="status">
         <th mat-header-cell *matHeaderCellDef mat-sort-header>Estado</th>
         <td mat-cell *matCellDef="let element">{{ element.status | titlecase }}</td>

@@ -2,6 +2,7 @@ export class Ncredito {
     constructor(
         public _id: String,
         public creditoId: Number,
+        public agente: String,
         public client: Number,
         public status: String,
         public description : String,

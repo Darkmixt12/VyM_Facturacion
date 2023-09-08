@@ -15,7 +15,7 @@ import {BorrarCreditoComponent } from '../borrar-credito/borrar-credito.componen
   providers: [FacturaService]
 })
 export class NotasCreditoComponent implements OnInit, AfterViewInit{
-displayedColumns: string[] = ['creditoId','client', 'status', 'location', 'description', 'acciones']
+displayedColumns: string[] = ['creditoId','client', 'agente','status', 'location', 'description', 'acciones']
 loading: boolean = false;
 dataSource = new MatTableDataSource<Ncredito>
 
